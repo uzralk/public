@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Button",
+"class": "DialogueAction",
+"language": "GDScript",
+"path": "res://DialogueAction.gd"
+}, {
+"base": "Control",
+"class": "DialogueBox",
+"language": "GDScript",
+"path": "res://Control.gd"
+}, {
+"base": "Control",
+"class": "DialogueBoxX",
+"language": "GDScript",
+"path": "res://DialogueBox.gd"
+}, {
+"base": "Node",
+"class": "DialoguePlayer",
+"language": "GDScript",
+"path": "res://DialoguePlayer.gd"
+} ]
+_global_script_class_icons={
+"DialogueAction": "",
+"DialogueBox": "",
+"DialogueBoxX": "",
+"DialoguePlayer": ""
+}
+
+[application]
+
+config/name="Arcology"
+run/main_scene="res://title_screen/TitleScreen.tscn"
+config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+
+[rendering]
+
+environment/default_clear_color=Color( 0.145098, 0.14902, 0.184314, 1 )
+environment/default_environment="res://default_env.tres"

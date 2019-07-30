@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://DialogueAction.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/Origicide/Origicide.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://DialogueBox.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 2 )
+
+[node name="SceneSpeak" type="Node2D"]
+script = ExtResource( 1 )
+dialogue_file_path = "res://Dialogs/Data/dialogs01.json"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 441.986
+margin_top = 40.063
+margin_right = 740.986
+margin_bottom = 131.063
+custom_fonts/font = SubResource( 1 )
+text = "talk"
+
+[node name="DialogueBox" parent="." instance=ExtResource( 3 )]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
