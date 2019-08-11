@@ -1,0 +1,309 @@
+
+Les index se terminant par X ne nécessitent pas d'être développés et représentent des intitulés de sections (sauf s'ils ne sont suivis d'aucun sous-titre)
+
+----------------------------------------------T.O.C.-------------------------------------------------
+
+
+1.1.X Map scene
+
+1.1.2 set the locations dictionnary (x & y coordinates, stairs n°, visible/invisible, scene id, state visited/analyzed/unvisited)
+1.1.3 set the location-buttons on the map
+1.1.4 set the outlines of buttons (orange, green or red depending on visited/scene analyzed/still unvisted)
+1.1.5 set the drop down menu for each button (visit/analyze) with greying/clicable options (Analyze)
+1.1.6 set the stairs menu on the left (with an up/down sliding)
+1.1.7 finish the U.I. : Remaining Investigation Leads (top right)
+1.1.8 Function for overflow animations ("Congrats ! You just win a new location !") (unclicable buttons)
+1.1.9 Buttons extra functionalities (substractinc an "Investigation-Leads Point" if clicking on a button with an red outline and save it in the dictionnary as "visited" and do the same for clicking "Analyze"  - for the first time)
+
+
+2.1.X Clues Presentation
+	
+
+2.1.0 Present a clue with text turning around
+		https://godotforums.org/discussion/18312/draw-text-along-a-circle-arc-path
+
+2.1.1 Present clues in list
+	2.1.1.X set the dictionnary / JSON clues
+
+2.1.2 Present clues in circle (the Wheel of Clues)
+	2.1.2 use Vector2
+
+2.1.3 make the wheel turn
+
+
+2.1.4 drag & drop a token apart (magnet)
+
+
+2.1.5 reduce and displace the wheel
+
+
+2.1.6 set the 3 states of clues presentation / displacement (with magnetic fields)
+	2.1.6.1 left (wheel on right)
+	2.1.6.2 right (wheel on left)
+	2.1.6.3 center (wheel becomes back a cloud)
+
+2.2.X draw a line between 2 tokens (in the cloud)
+
+
+	2.2.2 stretch the line (pure animation function ready to connect to the "confirm" button )
+
+
+	2.2.3 design the 3 tokens link action
+		2.2.3.X set the clues-links dictionnary / JSON (token id 1, token id 2, color)
+
+
+	2.2.4 save the link 
+		2.2.4.1 button Confirm
+
+
+	2.2.8 re print a saved link
+
+
+	2.2.9 texture the line (3 colors choice - red : suspicion - white : doubtful - gold : confirmed)
+
+
+2.3.X Cloudify the whole group of clues
+	2.3.1 how does the tokens move ? (where do they go ? And is there a reason for that ?)
+
+	2.3.2 with links well printed
+
+
+	2.3.3 zoom on a clue with links well printed
+
+
+	2.3.4 make the cloud moving slowly & continuesly
+
+
+	2.3.5 blurred shader the cloud
+
+
+	2.3.6 reduce and displace the complete cloud
+
+
+2.4.X Finish the presentation of clues system
+
+
+2.4.1 set the U.I. buttons & annex commands
+	2.4.1 release tokens / one step back
+	2.4.2 back to map scene
+
+2.5.1 calculate the owned Investigation Leads points
+
+
+3.1.X Dialog scene
+
+
+
+4.1.X Photo Analysis scene
+
+
+
+5.1.X Coposite Picture scene
+
+
+
+6.1.X TimeLine 
+
+
+
+7.1.X Inventory
+
+
+
+8.1.X Cinematic Sequencies
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+
+1.1.X Map scene
+
+
+1.1.1 set the background-image
+
+1.1.2 set the locations dictionnary (x & y coordinates, stairs n°, visible/invisible, scene id, state visited/analyzed/unvisited)
+1.1.3 set the location-buttons on the map (little round buttons with a number written in the center)
+1.1.4 set the outlines of buttons (orange, green or red depending on visited/scene analyzed/still unvisted)
+1.1.5 set the hover drop down menu for each button (visit/analyze) with greying/clicable options (Analyze)
+1.1.6 set the stairs menu on the left (with an up/down sliding) stairs clickable
+	1.1.6.2 hiding the buttons if they don't fit with the current stair
+1.1.7 finish the U.I. : Remaining Investigation Leads (top right) ; stair n° (topleft of the map) ; button "merge stairs from topdown" (printing all the buttons without care of stairs) & Menu (save/exit)
+1.1.8 Function for welcome-back overflow animations ("Congrats ! You just win a new location !")
+1.1.9 Buttons extra functionalities (substractinc an "Investigation-Leads Point" if clicking on a button with an green outline and save it in the dictionnary as "visited" and do the same for clicking "Analyze"  - for the first time)
+
+
+2.1.X Clues Presentation
+	
+
+2.1.0 Present a clue with text turning around
+
+	# having the text in circle but static
+		var my_string = "Hello World"
+		var x = (360) / my_string.length()
+		for i in range(0, my_string.length()):
+		    draw_set_transform(Vector2(0, 0), deg2rad(i * x - (my_string.length()/2*x)), Vector2(1,1))
+		    draw_char(font, Vector2(0, -30), my_string[my_string.length()-i-1], "", Color(0, 0, 0)
+
+2.1.1.1 Present clues in list
+	# do the text turning slowly along the circular path (counterclockwise)
+		http://docs.godotengine.org/en/latest/tutorials/2d/2d_movement.html   Rotation + movement
+		see also 2.1.3
+
+2.1.1.2 set the dictionnary / JSON for Clues
+	(id, icon, largepic, tinytext, longtext)
+
+2.1.2 Present clues in circle
+	use Vector2
+		https://docs.godotengine.org/en/3.1/tutorials/math/vector_math.html
+		&
+		distanceFromCenter = 5;
+		angleInDegrees = 90;
+		angleAsRadians = (angleInDegrees* Math.PI) / 180.0;
+		centerX = 100;
+		centerY = 100;
+		x = centerX +  Math.Cos(angleAsRadians) * distanceFromCenter;
+		y = centerY + Math.Sin(angleAsRadians) * distanceFromCenter;
+
+2.1.3 make the wheel turn slowly
+	turn the object "globalWrap" of a value V 
+	turn the objects "Tokens" of a value -V
+
+2.1.4.1 drag & drop a token apart (magnet)
+	https://godotengine.org/qa/41946/drag-and-drop-a-sprite-is-there-a-built-in-function-for-a-node
+
+	2.1.4.2 re-distribute the tokens around the wheel minus the choosen token (with a discrete distance)
+		see 2.1.2 refined
+
+2.1.5 reduce and displace the wheel
+		use the scale property (care to the famous rigid body bug)
+			https://gamedev.stackexchange.com/questions/134826/how-do-i-decrease-the-scale-of-an-instanced-node-or-scene
+				var sprite = newBlood.get_node("./Sprite")
+				sprite.scale(Vector2(0.5,0.5))
+
+	2.1.5.2 zoom in / zoom out buttons
+
+
+2.1.6 set the 3 states of clues presentation / displacement (with magnetic fields un/activated)
+	2.1.6.1 left (wheel on right or behind)
+	2.1.6.2 right (wheel on left or behind)
+	2.1.6.3 center (wheel behind - becomes/crossfades back a cloud - cf 2.3.X & blur 2.3.5)
+
+2.2.X draw a line between 2 tokens (in the cloud)
+	https://godotengine.org/qa/3829/how-to-draw-a-line-in-2d
+		The CanvasItem node has the function draw_line(...). Add a CanvasItem node to your project and attach a script with this code added to it:
+
+		func _draw():
+		    draw_line(Vector2(0,0), Vector2(50, 50), Color(255, 0, 0), 1)
+		This creates a red diagonal line in the top-left corner. Note that draw_line(...) function must be put in the _draw() function. To call the _draw() function again, call update().
+
+
+	2.2.2 stretch & texture the line (pure animation function ready to connect to the "confirm" button )
+		2.2.2.1
+			func draw_circle_arc(center, radius, angle_from, angle_to, color):
+		    var nb_points = 32
+		    var points_arc = PoolVector2Array()
+
+		    for i in range(nb_points+1):
+		        var angle_point = deg2rad(angle_from + i * (angle_to-angle_from) / nb_points - 90)
+		        points_arc.push_back(center + Vector2(cos(angle_point), sin(angle_point)) * radius)
+
+		    for index_point in range(nb_points):
+		        draw_line(points_arc[index_point], points_arc[index_point + 1], color)
+
+	2.2.3 design the 3 tokens link action
+		2.2.3.X set the clues-links dictionnary / JSON (token id 1, token id 2, color)
+
+
+	2.2.4 save the link 
+		2.2.4.1 button Confirm
+
+
+	2.2.8 re print a saved link
+
+
+	2.2.9 texture the line (3 colors choice - red : suspicion - white : doubtful - gold : confirmed)
+
+
+2.3.X Cloudify the whole group of clues
+	2.3.2 add a "change color button" (don't work on gold links)
+
+
+	2.3.1 how does the tokens move ? (where do they go ? And is there a reason for that ?)
+
+	2.3.2 with links well printed
+
+
+	2.3.3 zomm on a clue with links well printed
+
+
+	2.3.4 make the cloud moving slowly & continuesly
+
+
+	2.3.5 blurred shader the cloud
+
+
+	2.3.6 reduce and displace the complete cloud
+
+
+
+2.3.2 with links well printed
+
+
+2.3.3 zomm on a clue with links well printed
+
+
+2.3.4 make the cloud moving slowly & continuesly
+
+
+2.3.5 blurred shader the cloud
+
+
+2.3.6 reduce and displace the cloud
+
+
+2.4.X Finish the presentation of clues system
+
+
+2.4.1 set the U.I. buttons & annex commands
+	2.4.1 release tokens / one step back
+	2.4.2 back to map scene
+
+2.5.1 calculate the owned investigation points
+
+
+3.1.X Dialog scene
+
+
+
+4.1.X Photo Analysis scene
+
+
+
+5.1.X Coposite Picture scene
+
+
+
+6.1.X TimeLine 
+
+
+
+7.1.X Inventory
+
+
+8.1.X Cinematic Sequencies
+
+
