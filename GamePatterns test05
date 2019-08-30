@@ -27,53 +27,107 @@ espère pouvoir faire chanter les deux soeurs et gagner de l'argent.
 Isadora pretend qu'Hector etait amoureux d'elle et l'avait demandée en mariage,  ce qui est une ample exagération,  Hector 
 n'ayant jamais osé avouer son attirance pourtant assez transparente.
 Le bijou devait être déposé chez un receleur / mont de piété, BuyMeSpot tenu par un certain Dominic Leenov qui avait été prévenu de la livraison mais finalement jamais 
-livré par une connaissance des soeurs Joel Chometti trop occupé a se droguer  
+livré par une connaissance des soeurs Joel Chometti trop occupé a se droguer et à se cacher des soeurs depuis qu'il a échangé 
+la tiare contre une énorme dose de drogue au grand bonheur de son dealer habituel Naro-Ling.
+
+
+
+LES JETONS
 
 
 1 Les Personnages
-- Hector Hassanovries - victime
-- Hélena Hassanovries née Parrange - feu l'épouse de la victime
-- Isadora Yarson - soeur 1 et criminelle
-- Anova Yarson - soeur 2 - complice
-- Hikker Parrange - frère de l'épouse décédée
-- Nuluk Yagaenis - ancien responsable de la sécurité chez Hector pour le compte de HomeSafe
-- Joel Chometti - drogué - connait un receleur
-- Zack Channers - Geek spécialisé en sécurité
-- Dominic Leenov - receleur 
-- Leslie Hennings - alias d'Isadora
-- Georgina Tapperton - alias d'Anova
-- Irvin Yassipoch - directeur de HomeSafe
-- Eglantin Mouzidell - directrice de Borealis Prods
-- ancien proprio de Nuluk
+cl01 - Hector Hassanovries - victime
+cl02 - Hélena Hassanovries née Parrange - feu l'épouse de la victime
+cl03 - Isadora Yarson - soeur 1 et criminelle
+cl04 - Anova Yarson - soeur 2 - complice
+cl05 - Hikker Parrange - frère de l'épouse décédée
+cl06 - Nuluk Yagaenis - ancien responsable de la sécurité chez Hector pour le compte de HomeSafe
+cl07 - Joel Chometti - drogué - connait un receleur
+cl08 - Zack Channers - Geek spécialisé en sécurité
+cl09 - Dominic Leenov - receleur 
+cl10 - Leslie Hennings - alias d'Isadora
+cl11 - Georgina Tapperton - alias d'Anova
+cl12 - Irvin Yassipoch - directeur de HomeSafe
+cl13 - Eglantin Mouzidell - directrice de Borealis Prods
+cl14 - ancien proprio de Nuluk
+cl15 - Naro Ling - dealer de Joel Chometti
+cl16 - un clochard
+
+co01 - légiste / ballistique
+co02 - hacktivistes
+co03 - database des transits
+co04 - potins mondains
+co05 - CIA
 
 2 Les Sociétés
-- HomeSafe
-- BuyMeSpot
-- Borealis Prods
+sc1 - HomeSafe
+sc2 - BuyMeSpot
+sc3 - Borealis Prods
 
 3 Les Lieux
-- lieu du crime - maison d'Hector et d'Hélena
-- chambre d'Hélena
-- appartement d'Isadora
-- appartement d'Anova
-- Borealis Prods
-- maison d'Hikker Parrange
-- ancien appartement de Nuluk (à présent inhabité)
-- nouvel appartement de Nuluk dans les bas quartiers
-- société HomeSafe
-- domicile/bureau de Zack Channers
-- appartement de Joel Chometti
-- Magasin BuyMeSpot
+l01 - lieu du crime - maison d'Hector et d'Hélena
+lO2 - chambre d'Hélena
+l03 - appartement d'Isadora
+l04 - appartement d'Anova
+l05 - Borealis Prods
+l06 - maison d'Hikker Parrange
+l07 - ancien appartement de Nuluk (à présent inhabité)
+l08 - nouvel appartement de Nuluk dans les bas quartiers
+l09 - société HomeSafe
+l10 - domicile/bureau de Zack Channers
+l11 - appartement de Joel Chometti
+l12 - Magasin BuyMeSpot
+l13 - bar QG de Naro ling
 
-4 Objets indices
-- verre
-- poison
-- tiare
-- nouveau bras robotisé de Nuluk
+4 Les Objets indices
+cl01 - verre
+cl02 - poison
+cl03 - mannequin d'exposition de la chambre d'Helena
+cl04 - tiare
+cl05 - nouveau bras robotisé de Nuluk
+cl06 - drogue de Joel Chometti
+cl07 - plaque commémorative avec hologramme d'Hélena
 
-5 enregistrements
-- caméras chambre
-- enregistrements falsifiés
-- enregistrements authentiques
+5 Les enregistrements
+rd01 - caméras chambre
+rd02 - enregistrements falsifiés
+rd03 - enregistrements authentiques
+
+
+6 Les liens
+ln01 - amour pur à double sens
+ln02 - haine
+ln03 - jalousie
+ln04 - trahison
+ln05 - serment
+ln06 - complices
+ln07 - vol
+ln08 - chantage
+ln09 - admiration
+ln10 - humiliation
+ln11 - menace
+ln12 - suspicion
+ln13 - harcèlement
+ln14 - diffamation
+ln15 - enlèvement
+ln16 - amour à sens unique
+ln16 - obsession religieuse
+ln17 - pingrerie
+ln18 - influençabilité
+ln19 - dépendance financière
+ln20 - dépendance de réputation
+ln21 - dépendance médicale
+ln22 - dépendance professionnelle
+ln23 - pression sociale / déshonneur
+ln24 - viol
+
+
+
+
+
+
+
+
+
 
 
